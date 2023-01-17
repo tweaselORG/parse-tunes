@@ -2,10 +2,10 @@
     "name": "parse-tunes",
     "version": "0.0.0",
     "description": "Library for fetching select data on iOS apps from the Apple Apple Store via undocumented internal iTunes APIs.",
-    "bugs": "https://github.com/tracking-weasel/parse-tunes/issues",
+    "bugs": "https://github.com/tweaselORG/parse-tunes/issues",
     "repository": {
         "type": "git",
-        "url": "https://github.com/tracking-weasel/parse-tunes.git"
+        "url": "https://github.com/tweaselORG/parse-tunes.git"
     },
     "license": "MIT",
     "author": "Benjamin Altpeter <hi@bn.al>",
@@ -38,7 +38,9 @@
         ]
     },
     "prettier": "@baltpeter/prettier-config",
-    "dependencies": {},
+    "dependencies": {
+        "cross-fetch": "^3.1.5"
+    },
     "devDependencies": {
         "@baltpeter/eslint-config": "^2.0.0",
         "@baltpeter/prettier-config": "2.0.0",
