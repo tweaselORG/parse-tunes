@@ -76,7 +76,7 @@ import { fetchAppDetails, fetchMediaApiToken } from 'parse-tunes';
             language: 'en-US',
             token,
         });
-        console.log(appDetails.bundleId, '::', appDetails.isIOSBinaryMacOSCompatible);
+        console.log(appDetails.platformAttributes.ios?.bundleId, '::', appDetails.isIOSBinaryMacOSCompatible);
     }
 })();
 ```

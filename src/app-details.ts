@@ -213,9 +213,7 @@ export type PrivacyTypes = {
 export type AppDetailsResponseFragmentPerAttribute<Platforms extends AppDetailsPlatformInResponse> = {
     artistName: { artistName: string };
     artwork: PlatformAttributes<Platforms, { artwork: AppDetailsArtwork }>;
-    bundleId: {
-        bundleId: string;
-    };
+    bundleId: PlatformAttributes<Platforms, { bundleId: string }>;
     chartPositions: {
         chartPositions?: {
             [store in 'appStore' | 'messages']?: {

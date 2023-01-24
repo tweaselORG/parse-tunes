@@ -188,7 +188,7 @@ Parameters for an app details request.
 
 #### Defined in
 
-[app-details.ts:358](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L358)
+[app-details.ts:356](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L356)
 
 ___
 
@@ -210,7 +210,7 @@ tested responses. They may not be 100 % accurate.
 
 #### Defined in
 
-[app-details.ts:408](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L408)
+[app-details.ts:406](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L406)
 
 ___
 
@@ -233,8 +233,7 @@ Type mapping from the possible attributes to the additional data they add in the
 | `artistName` | { `artistName`: `string`  } |
 | `artistName.artistName` | `string` |
 | `artwork` | [`PlatformAttributes`](README.md#platformattributes)<`Platforms`, { `artwork`: [`AppDetailsArtwork`](README.md#appdetailsartwork)  }\> |
-| `bundleId` | { `bundleId`: `string`  } |
-| `bundleId.bundleId` | `string` |
+| `bundleId` | [`PlatformAttributes`](README.md#platformattributes)<`Platforms`, { `bundleId`: `string`  }\> |
 | `chartPositions` | { `chartPositions?`: { [store in "appStore" \| "messages"]?: Object }  } |
 | `chartPositions.chartPositions?` | { [store in "appStore" \| "messages"]?: Object } |
 | `contentRatingsBySystem` | { `contentRatingsBySystem`: { `appsApple`: { `advisories?`: `string`[] ; `name`: `string` ; `rank`: `number` ; `value`: `number`  }  }  } |
@@ -1168,7 +1167,7 @@ The app details, typed according to the attributes you specified.
 
 #### Defined in
 
-[app-details.ts:422](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L422)
+[app-details.ts:420](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L420)
 
 ___
 
