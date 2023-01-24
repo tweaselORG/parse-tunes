@@ -1,6 +1,21 @@
 import fetch from 'cross-fetch';
-import type { Chart, Genre, StorefrontCountry } from './common/consts';
-import { charts } from './common/consts';
+import type { Genre, StorefrontCountry } from './common/consts';
+
+/**
+ * The App Store top charts that can be fetched.
+ *
+ * @see https://github.com/tweaselORG/parse-tunes/issues/2#issuecomment-1377239436
+ */
+export const charts = {
+    topFreeIphone: 27,
+    topPaidIphone: 30,
+    topGrossingIphone: 38,
+    topFreeIpad: 44,
+    topPaidIpad: 45,
+    topGrossingIpad: 46,
+} as const;
+/** The `popId` of a chart on the App Store. */
+export type Chart = (typeof charts)[keyof typeof charts];
 
 /** Parameters for a top chart request. */
 export type TopChartRequest = {

@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@baltpeter/eslint-config@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@baltpeter/eslint-config/-/eslint-config-2.0.0.tgz#fda9a557cebb9a145f0b8bb857a79fcc7b2df2ad"
-  integrity sha512-983BKwaJz71FQBVzvQFrDg6FQD0qxTWN6sHMYiV0vBfmiqCDEHw337dbWRyPvxMPWId/UF+TRTrosprdTSCmCg==
+"@baltpeter/eslint-config@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@baltpeter/eslint-config/-/eslint-config-2.1.0.tgz#3d115e74576b200331f9648e27455f50ef13d27a"
+  integrity sha512-fJzl69RVcA3r5GHhECB3vpURQ3CbhKjgb/5mAtugub9bbrtgOS8poMK/Eu233RvSxh+gg9AYTsNx6NLCULAk5w==
   dependencies:
     "@typescript-eslint/parser" "^5.48.0"
     eslint-config-prettier "^8.6.0"
@@ -3557,6 +3557,11 @@ type-fest@^0.21.3:
   version "0.21.3"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
   integrity sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==
+
+type-fest@^3.5.3:
+  version "3.5.3"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.5.3.tgz#9f8cc2725aa8978ca65a4e6853e74748b0f2d27b"
+  integrity sha512-V2+og4j/rWReWvaFrse3s9g2xvUv/K9Azm/xo6CjIuq7oeGqsoimC7+9/A3tfvNcbQf8RPSVj/HV81fB4DJrjA==
 
 typed-array-length@^1.0.4:
   version "1.0.4"
