@@ -1,6 +1,6 @@
 import fetch from 'cross-fetch';
 import type { UnionToIntersection } from 'type-fest';
-import type { AllowedLanguagesPerCountryInMediaApi, GenreName, MediaApiCountry } from './common/consts';
+import type { AllowedLanguagesPerCountryInMediaApi, GenreName, MediaApiCountry } from '../common/consts';
 
 /**
  * List of URLs to pages on the App Store that contain a token for Apple's media API (amp-api.apps.apple.com) in their

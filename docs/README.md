@@ -88,7 +88,7 @@ An artwork image in a response fragment.
 
 #### Defined in
 
-[app-details.ts:169](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L169)
+[endpoints/app-details.ts:169](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L169)
 
 ___
 
@@ -100,7 +100,7 @@ An attribute (field) that can be requested from the app details endpoint.
 
 #### Defined in
 
-[app-details.ts:131](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L131)
+[endpoints/app-details.ts:131](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L131)
 
 ___
 
@@ -113,7 +113,7 @@ endpoint.
 
 #### Defined in
 
-[app-details.ts:139](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L139)
+[endpoints/app-details.ts:139](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L139)
 
 ___
 
@@ -129,7 +129,7 @@ A platform that can appear in the response from the app details endpoint as a ke
 
 #### Defined in
 
-[app-details.ts:159](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L159)
+[endpoints/app-details.ts:159](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L159)
 
 ___
 
@@ -157,7 +157,7 @@ A type mapping from the platforms that can appear in a request to the app detail
 
 #### Defined in
 
-[app-details.ts:146](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L146)
+[endpoints/app-details.ts:146](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L146)
 
 ___
 
@@ -188,7 +188,7 @@ Parameters for an app details request.
 
 #### Defined in
 
-[app-details.ts:356](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L356)
+[endpoints/app-details.ts:356](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L356)
 
 ___
 
@@ -210,7 +210,7 @@ tested responses. They may not be 100 % accurate.
 
 #### Defined in
 
-[app-details.ts:406](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L406)
+[endpoints/app-details.ts:406](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L406)
 
 ___
 
@@ -334,7 +334,7 @@ Type mapping from the possible attributes to the additional data they add in the
 
 #### Defined in
 
-[app-details.ts:213](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L213)
+[endpoints/app-details.ts:213](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L213)
 
 ___
 
@@ -346,7 +346,7 @@ The `popId` of a chart on the App Store.
 
 #### Defined in
 
-[top-charts.ts:18](https://github.com/tweaselORG/parse-tunes/blob/main/src/top-charts.ts#L18)
+[endpoints/top-charts.ts:18](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/top-charts.ts#L18)
 
 ___
 
@@ -407,7 +407,7 @@ Small helper for response fragments that are listed under `platformAttributes`.
 
 #### Defined in
 
-[app-details.ts:163](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L163)
+[endpoints/app-details.ts:163](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L163)
 
 ___
 
@@ -420,7 +420,7 @@ attribute.
 
 #### Defined in
 
-[app-details.ts:193](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L193)
+[endpoints/app-details.ts:193](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L193)
 
 ___
 
@@ -432,7 +432,7 @@ A list of privacy types as declared in a privacy label, in short format as retur
 
 #### Defined in
 
-[app-details.ts:180](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L180)
+[endpoints/app-details.ts:180](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L180)
 
 ___
 
@@ -530,7 +530,7 @@ Parameters for a top chart request.
 
 #### Defined in
 
-[top-charts.ts:21](https://github.com/tweaselORG/parse-tunes/blob/main/src/top-charts.ts#L21)
+[endpoints/top-charts.ts:21](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/top-charts.ts#L21)
 
 ___
 
@@ -542,7 +542,7 @@ A list of the app IDs of the apps on the requested top chart.
 
 #### Defined in
 
-[top-charts.ts:31](https://github.com/tweaselORG/parse-tunes/blob/main/src/top-charts.ts#L31)
+[endpoints/top-charts.ts:31](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/top-charts.ts#L31)
 
 ## Variables
 
@@ -763,7 +763,7 @@ Compiled through trial and error and from looking at requests made by the App St
 
 #### Defined in
 
-[app-details.ts:61](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L61)
+[endpoints/app-details.ts:61](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L61)
 
 ___
 
@@ -780,7 +780,7 @@ These are in the order of their response size. We'll try the smallest one first.
 
 #### Defined in
 
-[app-details.ts:12](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L12)
+[endpoints/app-details.ts:12](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L12)
 
 ___
 
@@ -807,7 +807,7 @@ https://github.com/tweaselORG/parse-tunes/issues/2#issuecomment-1377239436
 
 #### Defined in
 
-[top-charts.ts:9](https://github.com/tweaselORG/parse-tunes/blob/main/src/top-charts.ts#L9)
+[endpoints/top-charts.ts:9](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/top-charts.ts#L9)
 
 ___
 
@@ -1167,7 +1167,7 @@ The app details, typed according to the attributes you specified.
 
 #### Defined in
 
-[app-details.ts:420](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L420)
+[endpoints/app-details.ts:420](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L420)
 
 ___
 
@@ -1193,7 +1193,7 @@ The token.
 
 #### Defined in
 
-[app-details.ts:29](https://github.com/tweaselORG/parse-tunes/blob/main/src/app-details.ts#L29)
+[endpoints/app-details.ts:29](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L29)
 
 ___
 
@@ -1218,4 +1218,4 @@ A list of numerical app IDs in the requested top chart. The list is sorted by ra
 
 #### Defined in
 
-[top-charts.ts:44](https://github.com/tweaselORG/parse-tunes/blob/main/src/top-charts.ts#L44)
+[endpoints/top-charts.ts:44](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/top-charts.ts#L44)

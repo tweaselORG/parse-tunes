@@ -1,5 +1,5 @@
 import fetch from 'cross-fetch';
-import type { Genre, StorefrontCountry } from './common/consts';
+import type { Genre, StorefrontCountry } from '../common/consts';
 
 /**
  * The App Store top charts that can be fetched.
