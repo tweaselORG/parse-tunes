@@ -15,6 +15,9 @@ parse-tunes
 - [AppDetailsRequest](README.md#appdetailsrequest)
 - [AppDetailsResponse](README.md#appdetailsresponse)
 - [AppDetailsResponseFragmentPerAttribute](README.md#appdetailsresponsefragmentperattribute)
+- [AppSearchRequest](README.md#appsearchrequest)
+- [AppSearchResponse](README.md#appsearchresponse)
+- [AppSearchReturnedAttribute](README.md#appsearchreturnedattribute)
 - [Chart](README.md#chart)
 - [Genre](README.md#genre)
 - [GenreName](README.md#genrename)
@@ -47,6 +50,7 @@ parse-tunes
 - [fetchAppDetails](README.md#fetchappdetails)
 - [fetchMediaApiToken](README.md#fetchmediaapitoken)
 - [fetchTopApps](README.md#fetchtopapps)
+- [searchApps](README.md#searchapps)
 
 ## Type Aliases
 
@@ -336,6 +340,69 @@ Type mapping from the possible attributes to the additional data they add in the
 #### Defined in
 
 [common/app-meta.ts:167](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L167)
+
+___
+
+### AppSearchRequest
+
+Ƭ **AppSearchRequest**<`Country`, `Platforms`\>: `Object`
+
+Parameters for an app search request.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Country` | extends [`MediaApiCountry`](README.md#mediaapicountry) |
+| `Platforms` | extends [`AppDetailsPlatformInRequest`](README.md#appdetailsplatforminrequest)[] |
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `country` | `Country` | Which country's App Store to use. |
+| `language` | [`AllowedLanguagesPerCountryInMediaApi`](README.md#allowedlanguagespercountryinmediaapi)[`Country`] | The language in which to fetch the app details. |
+| `platforms?` | `Platforms` | The platform(s) for which to fetch details about the found apps. Will fetch details for all platforms if this parameter isn't specified. |
+| `searchTerm` | `string` | The term to search for. |
+
+#### Defined in
+
+[endpoints/search.ts:12](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/search.ts#L12)
+
+___
+
+### AppSearchResponse
+
+Ƭ **AppSearchResponse**<`Platforms`\>: `UnionToIntersection`<[`AppDetailsResponseFragmentPerAttribute`](README.md#appdetailsresponsefragmentperattribute)<`Platforms`\>[[`AppSearchReturnedAttribute`](README.md#appsearchreturnedattribute)]\>[]
+
+The response from the app search API.
+
+Note: There is no publicly available documentation for the API responses. The types were extrapolated from a few
+tested responses. They may not be 100 % accurate.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Platforms` | extends [`AppDetailsPlatformInResponse`](README.md#appdetailsplatforminresponse) |
+
+#### Defined in
+
+[endpoints/search.ts:99](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/search.ts#L99)
+
+___
+
+### AppSearchReturnedAttribute
+
+Ƭ **AppSearchReturnedAttribute**: ``"supportsArcade"`` \| ``"familyShareEnabledDate"`` \| ``"isFirstPartyHideableApp"`` \| ``"contentRatingsBySystem"`` \| ``"deviceFamilies"`` \| ``"chartPositions"`` \| ``"url"`` \| ``"usesLocationBackgroundMode"`` \| ``"userRating"`` \| ``"name"`` \| ``"genreDisplayName"`` \| ``"isPreorder"`` \| ``"isIOSBinaryMacOSCompatible"`` \| ``"artistName"`` \| ``"reviewsRestricted"`` \| ``"sellerLabel"`` \| ``"hasEula"`` \| ``"seller"`` \| ``"copyright"`` \| ``"minimumMacOSVersion"`` \| ``"isStandaloneWithCompanionForWatchOS"`` \| ``"isAppleWatchSupported"`` \| ``"is32bitOnly"`` \| ``"hasSafariExtension"`` \| ``"languageList"`` \| ``"requiresGameController"`` \| ``"requiredCapabilities"`` \| ``"offers"`` \| ``"supportedLocales"`` \| ``"requires32bit"`` \| ``"isSiriSupported"`` \| ``"isGameCenterEnabled"`` \| ``"releaseDate"`` \| ``"minimumOSVersion"`` \| ``"hasInAppPurchases"`` \| ``"bundleId"`` \| ``"hasMessagesExtension"`` \| ``"supportsGameController"`` \| ``"artwork"`` \| ``"hasFamilyShareableInAppPurchases"`` \| ``"isStandaloneForWatchOS"`` \| ``"isHiddenFromSpringboard"`` \| ``"isDeliveredInIOSAppForWatchOS"`` \| ``"hasPrivacyPolicyText"`` \| ``"editorialArtwork"`` \| ``"supportsPassbook"`` \| ``"requirementsString"`` \| ``"externalVersionId"``
+
+The attributes that are returned in the app search response.
+
+These are currently not configurable.
+
+#### Defined in
+
+[endpoints/search.ts:43](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/search.ts#L43)
 
 ___
 
@@ -1220,3 +1287,36 @@ A list of numerical app IDs in the requested top chart. The list is sorted by ra
 #### Defined in
 
 [endpoints/top-charts.ts:44](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/top-charts.ts#L44)
+
+___
+
+### searchApps
+
+▸ **searchApps**<`Country`, `Platforms`\>(`request`): `Promise`<[`AppSearchResponse`](README.md#appsearchresponse)<[`AppDetailsPlatformInResponseForRequest`](README.md#appdetailsplatforminresponseforrequest)[`Platforms`[`number`]]\>\>
+
+Search for apps on the the App Store. You can request a lot of different information about the app. The `attributes`
+parameter specifies which attributes to fetch. See [appDetailsAvailableAttributes](README.md#appdetailsavailableattributes) for a list of all available
+attributes.
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `Country` | extends ``"DZ"`` \| ``"AO"`` \| ``"AI"`` \| ``"AG"`` \| ``"AR"`` \| ``"AM"`` \| ``"AU"`` \| ``"AT"`` \| ``"AZ"`` \| ``"BH"`` \| ``"BB"`` \| ``"BY"`` \| ``"BE"`` \| ``"BZ"`` \| ``"BM"`` \| ``"BO"`` \| ``"BW"`` \| ``"BR"`` \| ``"VG"`` \| ``"BN"`` \| ``"BG"`` \| ``"CA"`` \| ``"KY"`` \| ``"CL"`` \| ``"CN"`` \| ``"CO"`` \| ``"CR"`` \| ``"CI"`` \| ``"HR"`` \| ``"CY"`` \| ``"CZ"`` \| ``"DK"`` \| ``"DM"`` \| ``"DO"`` \| ``"EC"`` \| ``"EG"`` \| ``"SV"`` \| ``"EE"`` \| ``"FI"`` \| ``"FR"`` \| ``"DE"`` \| ``"GH"`` \| ``"GR"`` \| ``"GD"`` \| ``"GT"`` \| ``"GY"`` \| ``"HN"`` \| ``"HK"`` \| ``"HU"`` \| ``"IS"`` \| ``"IN"`` \| ``"ID"`` \| ``"IE"`` \| ``"IL"`` \| ``"IT"`` \| ``"JM"`` \| ``"JP"`` \| ``"JO"`` \| ``"KZ"`` \| ``"KE"`` \| ``"KR"`` \| ``"KW"`` \| ``"LV"`` \| ``"LB"`` \| ``"LT"`` \| ``"LU"`` \| ``"MO"`` \| ``"MK"`` \| ``"MG"`` \| ``"MY"`` \| ``"MV"`` \| ``"ML"`` \| ``"MT"`` \| ``"MU"`` \| ``"MX"`` \| ``"MD"`` \| ``"MS"`` \| ``"NP"`` \| ``"NL"`` \| ``"NZ"`` \| ``"NI"`` \| ``"NE"`` \| ``"NG"`` \| ``"NO"`` \| ``"OM"`` \| ``"PK"`` \| ``"PA"`` \| ``"PY"`` \| ``"PE"`` \| ``"PH"`` \| ``"PL"`` \| ``"PT"`` \| ``"QA"`` \| ``"RO"`` \| ``"RU"`` \| ``"SA"`` \| ``"SN"`` \| ``"RS"`` \| ``"SG"`` \| ``"SK"`` \| ``"SI"`` \| ``"ZA"`` \| ``"ES"`` \| ``"LK"`` \| ``"KN"`` \| ``"LC"`` \| ``"VC"`` \| ``"SR"`` \| ``"SE"`` \| ``"CH"`` \| ``"TW"`` \| ``"TZ"`` \| ``"TH"`` \| ``"BS"`` \| ``"TT"`` \| ``"TN"`` \| ``"TR"`` \| ``"TC"`` \| ``"UG"`` \| ``"GB"`` \| ``"UA"`` \| ``"AE"`` \| ``"UY"`` \| ``"US"`` \| ``"UZ"`` \| ``"VE"`` \| ``"VN"`` \| ``"YE"`` \| ``"AF"`` \| ``"AL"`` \| ``"BJ"`` \| ``"BT"`` \| ``"BA"`` \| ``"BF"`` \| ``"KH"`` \| ``"CM"`` \| ``"CV"`` \| ``"TD"`` \| ``"CD"`` \| ``"SZ"`` \| ``"FJ"`` \| ``"GA"`` \| ``"GM"`` \| ``"GE"`` \| ``"GW"`` \| ``"IQ"`` \| ``"XK"`` \| ``"KG"`` \| ``"LA"`` \| ``"LR"`` \| ``"LY"`` \| ``"MW"`` \| ``"MR"`` \| ``"FM"`` \| ``"MN"`` \| ``"ME"`` \| ``"MA"`` \| ``"MZ"`` \| ``"MM"`` \| ``"NA"`` \| ``"NR"`` \| ``"PW"`` \| ``"PG"`` \| ``"CG"`` \| ``"RW"`` \| ``"SC"`` \| ``"SL"`` \| ``"SB"`` \| ``"ST"`` \| ``"TJ"`` \| ``"TO"`` \| ``"TM"`` \| ``"VU"`` \| ``"ZM"`` \| ``"ZW"`` |
+| `Platforms` | extends [`AppDetailsPlatformInRequest`](README.md#appdetailsplatforminrequest)[] |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `request` | [`AppSearchRequest`](README.md#appsearchrequest)<`Country`, `Platforms`\> | The request parameters. |
+
+#### Returns
+
+`Promise`<[`AppSearchResponse`](README.md#appsearchresponse)<[`AppDetailsPlatformInResponseForRequest`](README.md#appdetailsplatforminresponseforrequest)[`Platforms`[`number`]]\>\>
+
+The app details, typed according to the attributes you specified.
+
+#### Defined in
+
+[endpoints/search.ts:112](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/search.ts#L112)
