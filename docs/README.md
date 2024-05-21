@@ -88,7 +88,7 @@ An artwork image in a response fragment.
 
 #### Defined in
 
-[endpoints/app-details.ts:169](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L169)
+[common/app-meta.ts:123](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L123)
 
 ___
 
@@ -100,7 +100,7 @@ An attribute (field) that can be requested from the app details endpoint.
 
 #### Defined in
 
-[endpoints/app-details.ts:131](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L131)
+[common/app-meta.ts:84](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L84)
 
 ___
 
@@ -108,12 +108,12 @@ ___
 
 Ƭ **AppDetailsPlatformInRequest**: ``"web"`` \| ``"iphone"`` \| ``"appletv"`` \| ``"ipad"`` \| ``"mac"`` \| ``"watch"``
 
-A platform that can appear in the `platform` or `additionalPlatforms` parameter of a request to the app details
-endpoint.
+A platform that can appear in the `platform` or `additionalPlatforms` parameter of a request to the app details or
+search endpoint.
 
 #### Defined in
 
-[endpoints/app-details.ts:139](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L139)
+[common/app-meta.ts:92](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L92)
 
 ___
 
@@ -121,7 +121,8 @@ ___
 
 Ƭ **AppDetailsPlatformInResponse**: [`AppDetailsPlatformInResponseForRequest`](README.md#appdetailsplatforminresponseforrequest)[keyof [`AppDetailsPlatformInResponseForRequest`](README.md#appdetailsplatforminresponseforrequest)]
 
-A platform that can appear in the response from the app details endpoint as a key of the `platformAttributes` object.
+A platform that can appear in the response from the app details or search endpoint as a key of the
+`platformAttributes` object.
 
 **`See`**
 
@@ -129,7 +130,7 @@ A platform that can appear in the response from the app details endpoint as a ke
 
 #### Defined in
 
-[endpoints/app-details.ts:159](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L159)
+[common/app-meta.ts:113](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L113)
 
 ___
 
@@ -137,8 +138,8 @@ ___
 
 Ƭ **AppDetailsPlatformInResponseForRequest**: `Object`
 
-A type mapping from the platforms that can appear in a request to the app details endpoint to the key of the
-`platformAttributes` object in the response that they cause to be included.
+A type mapping from the platforms that can appear in a request to the app details or search endpoint to the key of
+the `platformAttributes` object in the response that they cause to be included.
 
 **`See`**
 
@@ -157,7 +158,7 @@ A type mapping from the platforms that can appear in a request to the app detail
 
 #### Defined in
 
-[endpoints/app-details.ts:146](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L146)
+[common/app-meta.ts:99](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L99)
 
 ___
 
@@ -188,7 +189,7 @@ Parameters for an app details request.
 
 #### Defined in
 
-[endpoints/app-details.ts:356](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L356)
+[endpoints/app-details.ts:58](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L58)
 
 ___
 
@@ -210,7 +211,7 @@ tested responses. They may not be 100 % accurate.
 
 #### Defined in
 
-[endpoints/app-details.ts:406](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L406)
+[endpoints/app-details.ts:108](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L108)
 
 ___
 
@@ -334,7 +335,7 @@ Type mapping from the possible attributes to the additional data they add in the
 
 #### Defined in
 
-[endpoints/app-details.ts:213](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L213)
+[common/app-meta.ts:167](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L167)
 
 ___
 
@@ -407,7 +408,7 @@ Small helper for response fragments that are listed under `platformAttributes`.
 
 #### Defined in
 
-[endpoints/app-details.ts:163](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L163)
+[common/app-meta.ts:117](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L117)
 
 ___
 
@@ -420,7 +421,7 @@ attribute.
 
 #### Defined in
 
-[endpoints/app-details.ts:193](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L193)
+[common/app-meta.ts:147](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L147)
 
 ___
 
@@ -432,7 +433,7 @@ A list of privacy types as declared in a privacy label, in short format as retur
 
 #### Defined in
 
-[endpoints/app-details.ts:180](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L180)
+[common/app-meta.ts:134](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L134)
 
 ___
 
@@ -763,7 +764,7 @@ Compiled through trial and error and from looking at requests made by the App St
 
 #### Defined in
 
-[endpoints/app-details.ts:61](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L61)
+[common/app-meta.ts:14](https://github.com/tweaselORG/parse-tunes/blob/main/src/common/app-meta.ts#L14)
 
 ___
 
@@ -780,7 +781,7 @@ These are in the order of their response size. We'll try the smallest one first.
 
 #### Defined in
 
-[endpoints/app-details.ts:12](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L12)
+[endpoints/app-details.ts:19](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L19)
 
 ___
 
@@ -1167,7 +1168,7 @@ The app details, typed according to the attributes you specified.
 
 #### Defined in
 
-[endpoints/app-details.ts:420](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L420)
+[endpoints/app-details.ts:122](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L122)
 
 ___
 
@@ -1193,7 +1194,7 @@ The token.
 
 #### Defined in
 
-[endpoints/app-details.ts:29](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L29)
+[endpoints/app-details.ts:36](https://github.com/tweaselORG/parse-tunes/blob/main/src/endpoints/app-details.ts#L36)
 
 ___
 
