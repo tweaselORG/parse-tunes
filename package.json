@@ -1,6 +1,6 @@
 {
     "name": "parse-tunes",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Library for fetching select data on iOS apps from the Apple Apple Store via undocumented internal iTunes APIs.",
     "bugs": "https://github.com/tweaselORG/parse-tunes/issues",
     "repository": {
