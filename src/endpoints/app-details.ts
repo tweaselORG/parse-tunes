@@ -93,7 +93,7 @@ export const appDetailsApiUrl = <
 >(
     request: AppDetailsRequest<Country, Platforms, Attributes>
 ) =>
-    `https://amp-api.apps.apple.com/v1/catalog/${request.country}/apps/${request.appId}?platform=${
+    `https://amp-api-edge.apps.apple.com/v1/catalog/${request.country}/apps/${request.appId}?platform=${
         request.platforms?.[0] || 'web'
     }&additionalPlatforms=${
         request.platforms ? request.platforms?.slice(1).join(',') : 'iphone,appletv,ipad,mac,watch'
